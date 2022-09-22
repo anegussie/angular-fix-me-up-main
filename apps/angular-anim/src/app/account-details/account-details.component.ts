@@ -23,7 +23,7 @@ export class AccountDetailsComponent implements OnInit {
   accounts: Account[]= <Account[]> {};
   currentRoute = '';
   accountDetail: Account = <Account> {};
-  idIndex = 0;
+  idIndex = 10;
 
 
   constructor(private accountService: AccountService, private activatedRoute : ActivatedRoute, private router: Router){}
@@ -37,7 +37,7 @@ export class AccountDetailsComponent implements OnInit {
       this.accounts = accounts;
     });
 
-    this.accountDetail = (this.idIndex>=0 && (this.idIndex <= this.accounts.length))? this.accounts[this.idIndex -1]:this.accounts[0];
+    this.accountDetail = (this.idIndex>=0 && (this.idIndex <= this.accounts.length))? this.accounts[this.idIndex -1]:<Account>{};
 
      /*
           .subscribe(event:  =>
