@@ -21,8 +21,8 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.sideNavItems = [
       { title: 'Account Overview', subtitle: '', link: '/' },
-      { title: 'Account Details', subtitle: '', link:'/account/:id' },
-      { title: 'Transfers', subtitle: '', link: '/transfers' },
+      { title: 'Account Details', subtitle: '', link:'/account/id' },
+     // { title: 'Transfers', subtitle: '', link: '/transfers' },
       { title: 'About Challenge', subtitle: '', link: '/about' },
     ]
   }

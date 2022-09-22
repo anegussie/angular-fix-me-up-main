@@ -10,7 +10,7 @@ import { TransfersComponent } from './transfers/transfers.component';
 const routes: Routes = [
   { path: '', component: AccountSummaryComponent },
   { path: 'account', component: AccountDetailsComponent, children: [{path: ':id', component: AccountDetailsComponent}] },
-  { path: 'transfers', component: TransfersComponent },
+ // { path: 'transfers', component: TransfersComponent },
   { path: 'about', component: AboutComponent },
 ];
 

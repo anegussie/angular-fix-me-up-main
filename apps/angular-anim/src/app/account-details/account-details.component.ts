@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit, } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, of } from 'rxjs';
 import { Router, NavigationEnd  } from '@angular/router';
@@ -23,7 +23,9 @@ export class AccountDetailsComponent implements OnInit {
   accounts: Account[]= <Account[]> {};
   currentRoute = '';
   accountDetail: Account = <Account> {};
-  idIndex = 10;
+  idIndex = 0x1000;
+
+
 
 
   constructor(private accountService: AccountService, private activatedRoute : ActivatedRoute, private router: Router){}
@@ -31,27 +33,24 @@ export class AccountDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.idIndex = Number(this.router.url.split('/').slice(-1).join(''));
 
+
      console.log(this.router.url.split('/').slice(-1).join(''));
 
      this.accountService.getAccounts().subscribe((accounts) => {
       this.accounts = accounts;
     });
 
-    this.accountDetail = (this.idIndex>=0 && (this.idIndex <= this.accounts.length))? this.accounts[this.idIndex -1]:<Account>{};
+    this.accountDetail = (this.idIndex>0 && (this.idIndex <= this.accounts.length))? this.accounts[this.idIndex -1]:<Account>{};
 
-     /*
-          .subscribe(event:  =>
-           {
-              this.currentRoute = event.url;
-              console.log(event);
-           });
-           */
 
       this.accountService.accountdetails.subscribe((data) => {
       this.accounts=<Account[]> data;
   })
 
   }
+
+
+
 
 
 }
