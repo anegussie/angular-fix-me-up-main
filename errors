@@ -1,0 +1,27 @@
+npm ERR! code ERESOLVE
+npm ERR! ERESOLVE unable to resolve dependency tree
+npm ERR! 
+npm ERR! While resolving: angular-anim@0.0.0
+npm ERR! Found: rxjs@7.4.0
+npm ERR! node_modules/rxjs
+npm ERR!   rxjs@"~7.4.0" from the root project
+npm ERR!   peer rxjs@"^6.5.3 || ^7.4.0" from @angular/core@14.0.7
+npm ERR!   node_modules/@angular/core
+npm ERR!     @angular/core@"~14.0.0" from the root project
+npm ERR!     peer @angular/core@"^14.0.0" from @ngrx/store@14.3.1
+npm ERR!     node_modules/@ngrx/store
+npm ERR!       @ngrx/store@"^14.0.2" from the root project
+npm ERR! 
+npm ERR! Could not resolve dependency:
+npm ERR! peer rxjs@"^6.5.3 || ^7.5.0" from @ngrx/store@14.3.1
+npm ERR! node_modules/@ngrx/store
+npm ERR!   @ngrx/store@"^14.0.2" from the root project
+npm ERR! 
+npm ERR! Fix the upstream dependency conflict, or retry
+npm ERR! this command with --force, or --legacy-peer-deps
+npm ERR! to accept an incorrect (and potentially broken) dependency resolution.
+npm ERR! 
+npm ERR! See /home/aalem/.npm/eresolve-report.txt for a full report.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/aalem/.npm/_logs/2022-09-17T23_13_58_917Z-debug-0.log
