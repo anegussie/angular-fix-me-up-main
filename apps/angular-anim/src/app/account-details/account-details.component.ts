@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { CommonModule } from '@angular/common';
 import { Observable, of } from 'rxjs';
 import { Router, NavigationEnd  } from '@angular/router';
 // eslint-disable-next-line
@@ -23,7 +24,7 @@ export class AccountDetailsComponent implements OnInit {
   accounts: Account[]= <Account[]> {};
   currentRoute = '';
   accountDetail: Account = <Account> {};
-  idIndex = 0x1000;
+  idIndex = 0xFFFFFF;
 
 
 
@@ -47,6 +48,16 @@ export class AccountDetailsComponent implements OnInit {
       this.accounts=<Account[]> data;
   })
 
+  }
+
+  isValidInput(): boolean {
+
+    const val = parseInt(this.router.url.split('/').slice(-1).join(''));
+
+    console.log(val);
+
+    if ((val >0) && (val <= this.accounts.length )) return true;
+    return false;
   }
 
 

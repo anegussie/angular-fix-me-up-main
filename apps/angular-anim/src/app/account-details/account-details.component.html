@@ -1,7 +1,7 @@
 
 <div>
 <h1>Account Details</h1>
-
+<div *ngIf="isValidInput(); else NotValid">
 <p>Account ID {{accountDetail.id}}</p>
 <!-- TODO: how to retrieve account id and other account details in this route? -->
  <section>
@@ -23,5 +23,14 @@
     </tbody>
   </table>
  </section>
+</div>
+
+<ng-template #NotValid>
+
+    <h4> Please Enter valid Page Number in URL.
+    Example: localhost:4200/account/1 </h4>
+
+</ng-template>
+
  </div>
 
