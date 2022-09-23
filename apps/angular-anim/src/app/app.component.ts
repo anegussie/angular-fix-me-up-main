@@ -22,7 +22,6 @@ export class AppComponent implements OnInit {
     this.sideNavItems = [
       { title: 'Account Overview', subtitle: '', link: '/' },
       { title: 'Account Details', subtitle: '', link:'/account/id' },
-     // { title: 'Transfers', subtitle: '', link: '/transfers' },
       { title: 'About Challenge', subtitle: '', link: '/about' },
     ]
   }
